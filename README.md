@@ -1,2 +1,0 @@
-# eindopdrachtcle
-team 3
