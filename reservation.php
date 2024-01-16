@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="data-field">
             <label for="adress">Adres</label>
-            <input id="adress" type="text" name="adress" placeholder="Dierenstraat 12" maxlength="75"
+            <input id="adress" type="text" name="adress" placeholder="Straat" maxlength="75"
                    value="<?= isset($adress) ? htmlentities($adress) : '' ?>"/>
             <span class="errors"><?= isset($errors['adress']) ? $errors['adress'] : '' ?></span>
         </div>
