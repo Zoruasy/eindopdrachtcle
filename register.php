@@ -39,7 +39,7 @@ if(isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link
             rel="icon"
-            href="https://cdn.glitch.me/dd3e24be-0f5e-4407-ac88-7e0d7057b1ff%2Ficon.png?v=1638789020824"
+            href=""
     />
     <title> Registreren</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
