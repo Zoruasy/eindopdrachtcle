@@ -11,8 +11,8 @@ $errors = [];
 if ($name == "") {
     $errors['name'] = 'Naam kan niet leeg zijn.';
 }
-if ($adress == "") {
-    $errors['adress'] = 'Adres kan niet leeg zijn.';
+if ($address == "") {
+    $errors['address'] = 'Adres kan niet leeg zijn.';
 }
 if ($info == "") {
     $errors['info'] = 'Info kan niet leeg zijn.';

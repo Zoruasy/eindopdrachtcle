@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
 
     //postback data
     $name = mysqli_escape_string($db, $_POST['name']);
-    $adress = mysqli_escape_string($db, $_POST['adress']);
+    $address = mysqli_escape_string($db, $_POST['address']);
     $email = mysqli_escape_string($db, $_POST['email']);
     $info = mysqli_escape_string($db, $_POST['info']);
     $phone = mysqli_escape_string($db, $_POST['phone']);
@@ -20,8 +20,8 @@ if (isset($_POST['submit'])) {
 
     if (empty($errors)) {
         //reservering plaatsen in database
-        $query = "INSERT INTO reservations (name, adress, email, info, phone, zip)
-                  VALUES ('$name', '$adress', '$email', '$info', '$phone', '$zip')";
+        $query = "INSERT INTO reservations (name, address, email, info, phone, zip)
+                  VALUES ('$name', '$address', '$email', '$info', '$phone', '$zip')";
         $result = mysqli_query($db, $query) or die('Error: ' . mysqli_error($db) . ' with query ' . $query);
 
         if ($result) {
@@ -62,7 +62,8 @@ if (isset($_POST['submit'])) {
 <nav>
     <div class="bigZoom"><a href="index.html">Home</a></div>
     <div class="bigZoom"><a href="reservation.php">Reserveren</a></div>
-    <div class="bigZoom"><a href="about.php">Over ons</a></div>
+    <div class="bigZoom"><a href="Contact.php">Contact
+        </a></div>
     <div class="bigZoom"><a href="login.php">Login</a></div>
 </nav>
 <header><h1>Reserveren</h1></header>
@@ -95,9 +96,9 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="data-field">
             <label for="adress">Adres</label>
-            <input id="adress" type="text" name="adress" placeholder="Straat" maxlength="75"
-                   value="<?= isset($adress) ? htmlentities($adress) : '' ?>"/>
-            <span class="errors"><?= isset($errors['adress']) ? $errors['adress'] : '' ?></span>
+            <input id="address" type="text" name="address" placeholder="Straat" maxlength="75"
+                   value="<?= isset($address) ? htmlentities($address) : '' ?>"/>
+            <span class="errors"><?= isset($errors['address']) ? $errors['address'] : '' ?></span>
         </div>
         <div class="data-field">
             <label for="zip">Postcode</label>
