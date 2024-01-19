@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link
             rel="icon"
-            href=""
+            href="https://image.cdn2.seaart.ai/2023-10-31/21370751556810757/108f40244f0ae6d0568c924fe00f39e0eca8212a_high.webp"
     />
     <title>Login</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">

@@ -1,6 +1,6 @@
 <?php
 /** @var $name */
-/** @var $adress */
+/** @var $address */
 /** @var $info */
 /** @var $zip */
 /** @var $phone */

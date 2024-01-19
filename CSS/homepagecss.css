@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+
+
+    background-color: #FFFDF5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigatiebar */
+
+nav {
+    position:sticky;
+    top: 0;
+    z-index: 100;
+    /* sticky nav bar die altijd boven andere elementen zit*/
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1rem;
+    border-bottom: 1.5rem;
+    border-left: 1rem;
+    border-right: 1rem;
+    border-style: solid;
+    border-color: #E79796;
+    background-color: #E79796;
+
+
+}
+nav a{
+    text-decoration:none;
+    color: black;
+}
+.navText{
+    text-decoration:none;
+    color: black;
+    background-color: #FFC98B;
+    border-top: 0.8rem solid #FFC98B;
+    border-left: 2.5rem solid #FFC98B;
+    border-bottom: 0.8rem solid #FFC98B;
+    border-right: 2.5rem solid #FFC98B;
+    border-radius: 0.5rem;
+
+
+
+}
+
+.navText:hover{
+
+    background-color: #FFB284;
+    border-top: 0.8rem solid #FFB284;
+    border-left: 2.5rem solid #FFB284;
+    border-bottom: 0.8rem solid #FFB284;
+    border-right: 2.5rem solid #FFB284;
+}
+
+/* Nav alignment */
+.naastElkaar {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.naastElkaar2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Header alignment */
+.naastElkaarHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.onderElkaarHeader{
+    flex-direction: column;
+
+}
+header h1{
+    background-color: #FFB284;
+    border-top: 1rem solid #FFB284;
+    border-left: 3.5rem solid #FFB284;
+    border-bottom: 1rem solid #FFB284;
+    border-right: 3.5rem solid #FFB284;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2rem;
+}
+header p{
+    margin-left: 12vw;
+    margin-right: 12vw;
+}
+
+
+/* Main alignment */
+.naastElkaarMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.onderElkaarMain{
+    flex-direction: column;
+
+}
+.onderElkaarMain2{
+    flex-direction: column;
+    margin: 2.5vw;
+    background-color: #E79796;
+    border-top: 0rem solid #E79796;
+    border-left: 2.5vw solid #E79796;
+    border-bottom: 0rem solid #E79796;
+    border-right: 2.5vw solid #E79796;
+    border-radius: 0.5rem;
+}
+.onderElkaarMain2:hover{
+    background-color:#FFB284;
+    border-top: 0rem solid #FFB284;
+    border-left: 2.5vw solid #FFB284;
+    border-bottom: 0rem solid #FFB284;
+    border-right: 2.5vw solid #FFB284;
+}
+main h3{
+    background-color: #FFC98B;
+    border-top: 1rem solid #FFC98B;
+    border-left: 3.5rem solid #FFC98B;
+    border-bottom: 1rem solid #FFC98B;
+    border-right: 3.5rem solid #FFC98B;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+main p{
+    margin-left: 12vw;
+    margin-right: 12vw;
+}
+.maakAfspraak{
+    margin:0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* footer  */
+.naastElkaarFooter{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+footer p{
+    margin-top: 1.5rem;
+}
+footer{
+    background-color: #C6C09C;
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBxOHN1aTN6cG0yZ3A3OXdieWkyaHptNHVkZjFyd3I1dGpmN2x4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RfA606geeWaWP5eyD8/giphy.gif);
+    object-fit:cover;
+
+    background-position-x:50%;
+    background-position-y: 30%;
+    background-size: 12%;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    max-height: 10rem;
+}
+
+
+
+
+
+
+/* Alle afbeeldingen */
+.logo{
+    max-width: 6rem;
+}
+.afbeelding{
+    min-width: 20vw;
+    max-height: 20vw;
+    object-fit:cover;
+}
+.kleineAfbeelding{
+    min-width: 6vw;
+    max-height: 6vw;
+    object-fit:cover;
+}
+.reserveringsicoon{
+    min-width: 1.3rem;
+    max-height: 1.3rem;
+    margin-right: 1rem;
+}
+.Afbeelding-reserveringsicoonGeel{
+    min-width: 10vw;
+    max-height: 10vw;
+    object-fit:cover;
+}
+
+
+
+/*  Opmaak lijnen  */
+.line{
+    margin-top: 2rem;
+    background-color: #FFB284;
+    padding: 2rem;
+
+}
+.line2{
+
+    background-color: #FFC98B;
+    padding: 2rem;
+
+}

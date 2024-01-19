@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link
             rel="icon"
-            href=""
+            href="https://image.cdn2.seaart.ai/2023-10-31/21370751556810757/108f40244f0ae6d0568c924fe00f39e0eca8212a_high.webp"
     />
     <title>Uw reservering is geplaats!!</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
@@ -23,7 +23,7 @@
     <div class="bigZoom"><a href="login.php">Login</a></div>
 </nav>
 
-<header><h1>Het is gelukt!</h1></header>
+<header><h1>Uw reservatie is gelukt!</h1></header>
 
 <main>
     <section>
