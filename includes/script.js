@@ -42,6 +42,21 @@ function renderCalendar() {
     const prevLastDayDate = prevLastDay.getDate();
     const nextDays = 7 - lastDayIndex - 1;
 
+    // Add event listeners to each day element
+    for (let i = 1; i <= lastDayDate; i++) {
+        const dayElement = document.querySelector(`.day:not(.prev):not(.next):nth-child(${i + firstDay.getDay()})`);
+        if (dayElement) {
+            dayElement.addEventListener("click", () => {
+                const clickedDate = `${currentYear}-${currentMonth + 1}-${i}`;
+
+                // Dynamisch de URL wijzigen
+                window.location.href = `login.php?date=${clickedDate}`;
+            });
+        }
+    }
+
+
+
     // update current year and month in header
     month.innerHTML = `${months[currentMonth]} ${currentYear}`;
 
@@ -126,5 +141,4 @@ function hideTodayBtn() {
         todayBtn.style.display = "flex";
     }
 }
-
 

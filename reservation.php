@@ -33,6 +33,7 @@ if (isset($_POST['submit'])) {
         //connectie sluiten
         mysqli_close($db);
     }
+
 }
 ?>
 
@@ -77,6 +78,7 @@ if (isset($_POST['submit'])) {
     <div class="bigZoom"><a href="index.html">Home</a></div>
     <div class="bigZoom"><a href="reservation.php">Reserveren</a></div>
     <div class="bigZoom"><a href="Contact.php">Contact
+
         </a></div>
     <div class="bigZoom"><a href="login.php">Login</a></div>
 </nav>
@@ -97,7 +99,6 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-
         <div class="weekdays">
             <div class="day">Sun</div>
             <div class="day">Mon</div>
@@ -110,17 +111,13 @@ if (isset($_POST['submit'])) {
         <div class="days">
 
         </div>
+
     </div>
 </div>
 
-    </a>
-</div>
+
+
 
 <!-- SCRIPT -->
-<script src="includes/script.js"></script>
-</head>
-
-<header><h1>Reserveren</h1></header>
-<body style="text-align:center">
-</body>
-</html>
+<script src="includes/script.js">
+    </script>
