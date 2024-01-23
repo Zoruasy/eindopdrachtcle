@@ -67,23 +67,28 @@ nav a{
     justify-content: space-between;
 }
 
-/* Header  */
-header .gelukt{
+
+/* Opmaak voor het kopgedeelte */
+.new-user{
+
+    text-decoration:none;
+    color: black;
     background-color: #FFB284;
-    border-top: 0.2rem solid #FFB284;
+    border-top: 0.1rem solid #FFB284;
     border-left: 3.5rem solid #FFB284;
-    border-bottom: 0.2rem solid #FFB284;
+    border-bottom: 0.1rem solid #FFB284;
     border-right: 3.5rem solid #FFB284;
     border-radius: 0.5rem;
+
     text-align: center;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
+    font-size: 1.5rem;
 }
-
-header a{
+.teruggaan{
     text-decoration:none;
     color: black;
     background-color: #FFC98B;
@@ -96,62 +101,52 @@ header a{
     text-align: center;
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-top: 4rem;
 
 }
-header a:hover{
+.teruggaan:hover{
     background-color: #FFB284;
 
     border-top: 1rem solid #FFB284;
     border-left: 3.5rem solid #FFB284;
     border-bottom: 1rem solid #FFB284;
     border-right: 3.5rem solid #FFB284;
+    margin-top: 4rem;
+}
+.invulveld{
+    margin-bottom: 5rem;
+}
+.content{
+    margin-top: 40vh;
+
 }
 
-
-
-
-/* footer  */
-.naastElkaarfooter{
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-
-}
-footer p{
-    margin-top: 1.5rem;
-}
-footer{
-
-    background-color: #C6C09C;
-    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBxOHN1aTN6cG0yZ3A3OXdieWkyaHptNHVkZjFyd3I1dGpmN2x4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RfA606geeWaWP5eyD8/giphy.gif);
-    object-fit:cover;
-    background-position-x:50%;
-    background-position-y: 30%;
-    background-size: 12%;
-    position: relative;
-    background-repeat: no-repeat;
-    overflow:hidden;
-    max-height: 10rem;
-}
-
-
-
-
-
-
-/* Alle afbeeldingen */
-
-/*YIPPIEEEE*/
-.yippie{
-    min-width: 40vw;
-    max-height: 40vw;
-    object-fit:cover;
+/* Ruimte voor inlog*/
+.login-space{
     margin-top: 2rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
 }
 
+/* Logo netjes rechts in de container plaatsen */
+.logo-container {
+    margin-right: auto;
+}
 
+/* ALLE AFBEELDINGEN */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.social-icons:hover {
+    filter:saturate(150%)
+}
+
+.social-icons img {
+    max-width: 50px;
+    height: auto;
+}
 .logo{
     max-width: 6rem;
 }
@@ -174,4 +169,112 @@ footer{
     min-width: 10vw;
     max-height: 10vw;
     object-fit:cover;
+}
+
+
+/* footer  */
+.naastElkaarFooter{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+footer p{
+    margin-top: 1.5rem;
+}
+footer{
+
+    background-color: #C6C09C;
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBxOHN1aTN6cG0yZ3A3OXdieWkyaHptNHVkZjFyd3I1dGpmN2x4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RfA606geeWaWP5eyD8/giphy.gif);
+    object-fit:cover;
+
+    background-position-x:50%;
+    background-position-y: 30%;
+    background-size: 12%;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    max-height: 10rem;
+}
+
+
+
+
+
+
+
+/* form */
+
+
+
+/* Form container styling */
+.styled-form {
+
+
+
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 33vw;
+    margin-left: 33vw;
+
+}
+
+/* Data field styling */
+.data-field {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 90%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.errors {
+    color: #ff0000;
+
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+/* Submit button styling */
+.data-submit {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #C6C09C;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Animation for smallZoom effect */
+.smallZoom {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.smallZoom:hover {
+    transform: scale(1);
 }

@@ -103,6 +103,7 @@ header p{
 .onderElkaarMain{
     flex-direction: column;
 
+
 }
 .onderElkaarMain2{
     flex-direction: column;
@@ -113,6 +114,7 @@ header p{
     border-bottom: 0rem solid #E79796;
     border-right: 2.5vw solid #E79796;
     border-radius: 0.5rem;
+
 }
 .onderElkaarMain2:hover{
     background-color:#FFB284;
@@ -212,4 +214,10 @@ footer{
     background-color: #FFC98B;
     padding: 2rem;
 
+}
+
+
+/* Weblinks */
+a {
+text-decoration: none;
 }

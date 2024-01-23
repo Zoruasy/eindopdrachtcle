@@ -14,7 +14,10 @@
 </head>
 
 <body style="text-align:center">
-
+<link
+        rel="icon"
+        href="https://image.cdn2.seaart.ai/2023-08-22/15094119452964869/3514f3e2a650050b5d50803bdae262e3f7c15aa0_high.webp"
+/>
 <nav> <!-- De navigatiebar -->
     <div class="naastElkaar2">
         <div>
@@ -53,7 +56,6 @@
 </header>
 
 <main>
-    <img class="yippie" src="https://media1.tenor.com/m/R8AmGhdQYCAAAAAC/yippie.gif"  alt="Afbeelding-yippie">
     <script>
         // When the user clicks on div, open the popup
         function myFunction() {
@@ -64,7 +66,7 @@
 </main>
 
 <footer>
-    <div class="naastElkaarFooter">
+    <div class="naastElkaarfooter">
         <img class="kleineAfbeelding" src="images/email.png" alt="Afbeelding-email">
         <p>Neem contact op met ons
             <br>
@@ -72,7 +74,6 @@
             <br>
             +31 6 12345678
         </p>
-
     </div>
 </footer>
 
@@ -80,11 +81,3 @@
 
 </html>
 
-    <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
-        }
-    </script>
-</main>

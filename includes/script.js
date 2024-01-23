@@ -46,12 +46,7 @@ function renderCalendar() {
     for (let i = 1; i <= lastDayDate; i++) {
         const dayElement = document.querySelector(`.day:not(.prev):not(.next):nth-child(${i + firstDay.getDay()})`);
         if (dayElement) {
-            dayElement.addEventListener("click", () => {
-                const clickedDate = `${currentYear}-${currentMonth + 1}-${i}`;
 
-                // Dynamisch de URL wijzigen
-                window.location.href = `login.php?date=${clickedDate}`;
-            });
         }
     }
 
@@ -108,17 +103,25 @@ nextBtn.addEventListener("click", () => {
     renderCalendar();
 });
 
-// prev monyh btn
+// prev month btn
 prevBtn.addEventListener("click", () => {
     // increase by one
     currentMonth--;
-    // check if let than 0 then make it 11 and deacrease year
+    // check if let than 0 then make it 11 and decrease year
     if (currentMonth < 0) {
         currentMonth = 11;
         currentYear--;
     }
     renderCalendar();
 });
+
+document.getElementById('days').addEventListener("click", (e) => {
+    if (e.target.classList.contains('day')){
+        console.log(e.target.innerText);
+        document.location.href = `doorsturen.php?date=${currentYear}-${currentMonth+1}-${e.target.innerText}`;
+    }
+});
+
 
 // go to today
 todayBtn.addEventListener("click", () => {
@@ -141,4 +144,5 @@ function hideTodayBtn() {
         todayBtn.style.display = "flex";
     }
 }
+
 

@@ -108,7 +108,7 @@ if (isset($_POST['submit'])) {
             <div class="day">Fri</div>
             <div class="day">Sat</div>
         </div>
-        <div class="days">
+        <div class="days" id="days">
 
         </div>
 

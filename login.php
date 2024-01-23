@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link
             rel="icon"
-            href="https://image.cdn2.seaart.ai/2023-10-31/21370751556810757/108f40244f0ae6d0568c924fe00f39e0eca8212a_high.webp"
+            href="https://image.cdn2.seaart.ai/2023-08-22/15094119452964869/3514f3e2a650050b5d50803bdae262e3f7c15aa0_high.webp"
     />
     <title>Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
