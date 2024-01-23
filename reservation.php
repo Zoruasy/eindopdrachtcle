@@ -74,14 +74,19 @@ if (isset($_POST['submit'])) {
     />
     <title>Mini Calendar</title>
 </head>
-<nav>
-    <div class="bigZoom"><a href="index.html">Home</a></div>
-    <div class="bigZoom"><a href="reservation.php">Reserveren</a></div>
-    <div class="bigZoom"><a href="Contact.php">Contact
 
-        </a></div>
-    <div class="bigZoom"><a href="login.php">Login</a></div>
+<nav class="main-navigation">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Vrolijke_Vee_Oppas" class="logo">
+    </div>
+    <div class="nav-links-container">
+        <div class="nav-item bigZoom"><a href="index.html">Home</a></div>
+        <div class="nav-item bigZoom"><a href="reservation.php">Reserveren</a></div>
+        <div class="nav-item bigZoom"><a href="Contact.php">Over ons</a></div>
+        <div class="nav-item bigZoom"><a href="login.php">Login</a></div>
+    </div>
 </nav>
+
 <div class="container">
     <div class="calendar">
         <div class="header">

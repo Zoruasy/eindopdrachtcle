@@ -16,11 +16,11 @@ if(isset($_POST['submit'])) {
         $errors['password'] = 'Voer een wachtwoord in';
     }
 
+
     //password hashen
-    if(empty($errors)) {
+    if (empty($errors)) {
         $password = password_hash($password, PASSWORD_DEFAULT);
-
-
+        $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 
         $result = mysqli_query($db, $query)
         or die('Db Error: '.mysqli_error($db).' with query: '.$query);
