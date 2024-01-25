@@ -1,3 +1,41 @@
+<?php
+/** @var mysqli $db */
+
+//checken of post isset, doet anders niks
+if (isset($_POST['submit'])) {
+    //database connectie openen
+    require_once "db/database.php";
+
+    //postback data
+    $name = mysqli_escape_string($db, $_POST['name']);
+    $address = mysqli_escape_string($db, $_POST['address']);
+    $email = mysqli_escape_string($db, $_POST['email']);
+    $info = mysqli_escape_string($db, $_POST['info']);
+    $phone = mysqli_escape_string($db, $_POST['phone']);
+    $zip = mysqli_escape_string($db, $_POST['zip']);
+
+    //form-validation ophalen
+    require_once "includes/form-validation.php";
+
+    if (empty($errors)) {
+        //reservering plaatsen in database
+        $query = "INSERT INTO reservations (name, address, email, info, phone, zip)
+                  VALUES ('$name', '$address', '$email', '$info', '$phone', '$zip')";
+        $result = mysqli_query($db, $query) or die('Error: ' . mysqli_error($db) . ' with query ' . $query);
+
+        if ($result) {
+            header('Location: success.php');
+            exit;
+        } else {
+            $errors['db'] = 'Something went wrong in your database query: ' . mysqli_error($db);
+        }
+
+        //connectie sluiten
+        mysqli_close($db);
+    }
+
+}
+?>
 
 
 <head>
@@ -27,7 +65,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="CSS/calendarcss.css" />
+    <link rel="stylesheet" href="CSS/reservationcss.css" />
 
     <!-- FONTAWESOME -->
     <link
@@ -36,19 +74,32 @@
     />
     <title>Mini Calendar</title>
 </head>
+<nav> <!-- De navigatiebar -->
+    <div class="naastElkaar2">
+        <div>
+            <img class="logo" src="images/logo.png" alt="Afbeelding-logo">
+        </div>
 
-<nav class="main-navigation">
-    <div class="logo-container">
-        <img src="images/logo.png" alt="Vrolijke_Vee_Oppas" class="logo">
+
+        <div class="naastElkaar">
+            <a class="navText" href="index.html">Home</a>
+            <div class="navText">
+                <div class="naastElkaar2">
+                    <div><img class="reserveringsicoon" src="images/reserveringsicoon.png"
+                              alt="Afbeelding-reserveringsicoon"></div>
+                    <div> <a href="reservation.php">Reserveren</a></div>
+                </div>
+            </div>
+
+            <a class="navText" href="#contact">Contact</a>
+            <a class="navText" href="login.php">Log in</a>
+        </div>
     </div>
-    <div class="nav-links-container">
-        <div class="nav-item bigZoom"><a href="index.html">Home</a></div>
-        <div class="nav-item bigZoom"><a href="reservation.php">Reserveren</a></div>
-        <div class="nav-item bigZoom"><a href="Contact.php">Over ons</a></div>
-        <div class="nav-item bigZoom"><a href="login.php">Login</a></div>
-    </div>
+
+
 </nav>
 
+<h1 class="reserveerDatum"> Reserveer een datum!  </h1>
 <div class="container">
     <div class="calendar">
         <div class="header">
@@ -87,4 +138,18 @@
 
 <!-- SCRIPT -->
 <script src="includes/script.js">
-    </script>
+</script>
+
+
+<footer>
+    <div class="naastElkaarFooter">
+        <img class="kleineAfbeelding" src="images/email.png" alt="Afbeelding-email">
+        <p id="contact">Neem contact op met ons
+            <br>
+            vrolijkeveeoppas@gmail.com
+            <br>
+            +31 6 12345678
+        </p>
+
+    </div>
+</footer>

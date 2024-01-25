@@ -1,58 +1,127 @@
-/* Reset voor standaardmarges en -vullingen */
-body, h1, h2, h3, p, ol, ul, select {
-    margin: 0;
-    padding: 0;
-
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 4vh;
-    margin-top: 4vh;
-}
-
-/* Lekker leesbaar lettertype voor de hele pagina */
 body {
-    font-family: 'Poppins', sans-serif;
+    margin: 0;
+
+
     background-color: #FFFDF5;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Stijl voor het logo in de header */
-img.logo {
-    max-width: 10vw;
-    height: auto;
-}
+/* Navigatiebar */
 
-/* Opmaak voor de hoofdnavigatiebalk */
-nav.main-navigation {
+nav {
+    position:sticky;
     top: 0;
     z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #E79796;
-    border: 1rem solid #E79796;
-}
+    /* sticky nav bar die altijd boven andere elementen zit*/
 
-/* Stijl voor navigatielinks */
-.nav-item a {
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1rem;
+    border-bottom: 1.5rem;
+    border-left: 1rem;
+    border-right: 1rem;
+    border-style: solid;
+    border-color: #E79796;
+    background-color: #E79796;
+
+
+}
+nav a{
+    text-decoration:none;
     color: black;
 }
+.navText{
+    text-decoration:none;
+    color: black;
+    background-color: #FFC98B;
+    border-top: 0.8rem solid #FFC98B;
+    border-left: 2.5rem solid #FFC98B;
+    border-bottom: 0.8rem solid #FFC98B;
+    border-right: 2.5rem solid #FFC98B;
+    border-radius: 0.5rem;
 
-/* Effect wanneer je over een navigatielink hovert */
-.nav-item:hover a {
-    background-color: #FFB284;
-    border: 0.8rem solid #FFB284;
+
+
 }
+
+.navText:hover{
+
+    background-color: #FFB284;
+    border-top: 0.8rem solid #FFB284;
+    border-left: 2.5rem solid #FFB284;
+    border-bottom: 0.8rem solid #FFB284;
+    border-right: 2.5rem solid #FFB284;
+}
+
+/* Nav alignment */
+.naastElkaar {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.naastElkaar2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 /* Opmaak voor het kopgedeelte */
-header{
-    margin-top: 5rem;
+.new-user{
+
+    text-decoration:none;
+    color: black;
+    background-color: #FFB284;
+    border-top: 0.1rem solid #FFB284;
+    border-left: 3.5rem solid #FFB284;
+    border-bottom: 0.1rem solid #FFB284;
+    border-right: 3.5rem solid #FFB284;
+    border-radius: 0.5rem;
+
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    font-size: 1.5rem;
+}
+.teruggaan{
+    text-decoration:none;
+    color: black;
+    background-color: #FFC98B;
+    border-top: 1rem solid #FFC98B;
+    border-left: 3.5rem solid #FFC98B;
+    border-bottom: 1rem solid #FFC98B;
+    border-right: 3.5rem solid #FFC98B;
+    border-radius: 0.5rem;
+
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 4rem;
+
+}
+.teruggaan:hover{
+    background-color: #FFB284;
+
+    border-top: 1rem solid #FFB284;
+    border-left: 3.5rem solid #FFB284;
+    border-bottom: 1rem solid #FFB284;
+    border-right: 3.5rem solid #FFB284;
+    margin-top: 4rem;
+}
+.invulveld{
+    margin-bottom: 5rem;
+}
+.content{
+    margin-top: 40vh;
+
 }
 
-/* Ruimte voor inlog */
+/* Ruimte voor inlog*/
 .login-space{
     margin-top: 2rem;
 }
@@ -61,50 +130,6 @@ header{
 .logo-container {
     margin-right: auto;
 }
-
-
-.nav-links-container {
-    display: flex;
-    gap: 1rem;
-}
-
-
-.nav-item {
-    text-decoration: none;
-    color: black;
-    background-color: #FFC98B;
-    border: 0.8rem solid #FFC98B;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem;
-}
-
-
-.nav-item:hover {
-    background-color: #FFB284;
-    border: 0.8rem solid #FFB284;
-}
-
-
-.content {
-    margin: 2rem;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-icons img {
-    max-width: 50px;
-    height: auto;
-}
-
-
-
 
 /* ALLE AFBEELDINGEN */
 .social-icons {
@@ -173,6 +198,12 @@ footer{
 }
 
 
+
+
+
+
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -180,6 +211,7 @@ form {
     margin: 0 auto;
     max-width: 400px;
     padding: 0 1rem;
+    margin-bottom: 3rem;
 }
 
 form label {
@@ -190,10 +222,7 @@ form textarea {
     resize: vertical;
 }
 
-#text
-{
-    
-}
+
 .doorgaan-container {
     margin-bottom: 5rem;
     margin-top: 1rem;

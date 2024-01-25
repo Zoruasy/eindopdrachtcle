@@ -1,0 +1,53 @@
+
+
+/* footer  */
+.naastElkaarFooter{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+footer p{
+    margin-top: 1.5rem;
+}
+footer{
+    background-color: #C6C09C;
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBxOHN1aTN6cG0yZ3A3OXdieWkyaHptNHVkZjFyd3I1dGpmN2x4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RfA606geeWaWP5eyD8/giphy.gif);
+    object-fit:cover;
+
+    background-position-x:50%;
+    background-position-y: 30%;
+    background-size: 12%;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    max-height: 10rem;
+}
+
+
+/* Alle afbeeldingen */
+.logo{
+    max-width: 6rem;
+}
+.afbeelding{
+    min-width: 20vw;
+    max-height: 20vw;
+    object-fit:cover;
+}
+.kleineAfbeelding{
+    min-width: 6vw;
+    max-height: 6vw;
+    object-fit:cover;
+}
+.reserveringsicoon{
+    min-width: 1.3rem;
+    max-height: 1.3rem;
+    margin-right: 1rem;
+}
+.Afbeelding-reserveringsicoonGeel{
+    min-width: 10vw;
+    max-height: 10vw;
+    object-fit:cover;
+}
+
+

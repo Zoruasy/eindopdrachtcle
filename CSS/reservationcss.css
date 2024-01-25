@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 body {
     margin: 0;
 
@@ -66,17 +68,8 @@ nav a{
     flex-direction: row;
     justify-content: space-between;
 }
-/* Header alignment */
-.naastElkaarHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.onderElkaarHeader{
-    flex-direction: column;
 
-}
-header h1{
+.reserveerDatum{
     background-color: #FFB284;
     border-top: 1rem solid #FFB284;
     border-left: 3.5rem solid #FFB284;
@@ -88,63 +81,125 @@ header h1{
     margin-right: 5vw;
     margin-top: 2rem;
 }
-header p{
-    margin-left: 12vw;
-    margin-right: 12vw;
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #e5a4b1;
+    --text-color: #1d1d1d;
+    --bg-color: #f1f1fb;
 }
-
-
-/* Main alignment */
-.naastElkaarMain{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #fff;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.calendar {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+}
+.calendar .header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
 }
-.onderElkaarMain{
-    flex-direction: column;
-
-
+.calendar .header .month {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-color);
 }
-.onderElkaarMain2{
-    flex-direction: column;
-    margin: 2.5vw;
-    background-color: #E79796;
-    border-top: 0rem solid #E79796;
-    border-left: 2.5vw solid #E79796;
-    border-bottom: 0rem solid #E79796;
-    border-right: 2.5vw solid #E79796;
-    border-radius: 0.5rem;
-
+.calendar .header .btns {
+    display: flex;
+    gap: 10px;
 }
-.onderElkaarMain2:hover{
-    background-color:#FFB284;
-    border-top: 0rem solid #FFB284;
-    border-left: 2.5vw solid #FFB284;
-    border-bottom: 0rem solid #FFB284;
-    border-right: 2.5vw solid #FFB284;
+.calendar .header .btns .btn {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-main h3{
-    background-color: #FFC98B;
-    border-top: 1rem solid #FFC98B;
-    border-left: 3.5rem solid #FFC98B;
-    border-bottom: 1rem solid #FFC98B;
-    border-right: 3.5rem solid #FFC98B;
-    border-radius: 0.5rem;
+.calendar .header .btns .btn:hover {
+    background-color: #db0933;
+    transform: scale(1.05);
+}
+.weekdays {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.weekdays .day {
+    width: calc(100% / 7 - 10px);
     text-align: center;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 16px;
+    font-weight: 600;
 }
-main p{
-    margin-left: 12vw;
-    margin-right: 12vw;
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.maakAfspraak{
-    margin:0;
-    font-size: 1.5rem;
-    text-align: center;
+.days .day {
+    width: calc(100% / 7 - 10px);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: #fff;
+    transition: all 0.3s;
 }
+.days .day:not(.next):not(.prev):hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+.days .day.today {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.days .day.next,
+.days .day.prev {
+    color: #ccc;
+}
+
+
 
 /* footer  */
 .naastElkaarFooter{
@@ -169,10 +224,6 @@ footer{
     overflow:hidden;
     max-height: 10rem;
 }
-
-
-
-
 
 
 /* Alle afbeeldingen */
@@ -200,53 +251,4 @@ footer{
     object-fit:cover;
 }
 
-
-
-/*  Opmaak lijnen  */
-.line{
-    margin-top: 2rem;
-    background-color: #FFB284;
-    padding: 2rem;
-
-}
-.line2{
-
-    background-color: #FFC98B;
-    padding: 2rem;
-
-}
-
-
-/* Weblinks */
-a {
-text-decoration: none;
-}
-
-
-/* Media Queries*/
-
-
-/* Mobile First: Standaardstijlen voor kleine schermen */
-body {
-    font-size: 16px; /* Stel de standaardtekstgrootte in voor kleine schermen */
-}
-
-/* Tablet- en desktopschermen */
-@media only screen and (min-width: 600px) {
-    body {
-        font-size: 18px; /* Pas de tekstgrootte aan voor tablets en grotere schermen */
-    }
-
-    /* Voeg hier andere stijlaanpassingen toe voor tablets en grotere schermen */
-}
-
-/* Desktopschermen */
-@media only screen and (min-width: 1024px) {
-    /* Voeg hier stijlaanpassingen toe die specifiek zijn voor grotere desktopschermen */
-}
-
-/* Grote desktopschermen */
-@media only screen and (min-width: 1200px) {
-    /* Voeg hier stijlaanpassingen toe die specifiek zijn voor zeer grote desktopschermen */
-}
 
